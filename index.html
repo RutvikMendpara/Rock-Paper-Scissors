@@ -5,30 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
+    <title>Rock Paper Scissors</title>
+    <script src="/index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>
-            Rock Paper Scissors
-        </h1>
-    </div>
+    <header class="header">
+        <h1>ROCK PAPER SCISSORS</h1>
+    </header>
 
-    <section class="content">
-        <h3>
-            Player has 3 choices.
-        </h3>
-        <ol>
-            <li>Rock</li>
-            <li>Paper</li>
-            <li>Scissors</li>
-        </ol>
+    <main class="main">
+        <div class="score-header">
+            <h2>Choose your weapon</h2>
+        </div>
+        <div class="score-text">
+            <h3>The first player to get 5 points will win!</h3>
+        </div>
 
-    </section>
+        <div class="score-container">
+            <div class="score-box">
+                <div class="sign" id="player-sign">
+                    ❓
+                </div>
+                <p class="score" id="player-score">
+                    player : 0
+                </p>
+            </div>
 
-    <script src="index.js"></script>
+            <div class="score-box">
+                <div class="sign" id="computer-sign">
+                    ❓
+                </div>
+                <p class="score" id="computer-score">
+                    computer : 0
+                </p>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="btn" id="rock">
+                ✊
+            </button>
+            <button class="btn" id="paper">
+                ✋
+            </button>
+            <button class="btn" id="scissors">
+                ✂️
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; Rutvik Mendpara</p>
+    </footer>
+
 </body>
 
 </html>

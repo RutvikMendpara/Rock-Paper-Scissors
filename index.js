@@ -1,16 +1,16 @@
 function game() {
     for (let i = 1; i < 6; i++) {
-    
+
         // let computerScore = 0;
         // let playerScore = 0;
 
-        let playerSelection = window.prompt();
+        // let playerSelection = window.prompt();
 
         //convert UPPERCASE to lowercase
-        playerSelection = playerSelection.toLowerCase(); 
-        
+        playerSelection = playerSelection.toLowerCase();
+
         //generate random 3 number between 1 to 3 
-        let computerSelection = Math.floor(Math.random() * 3) + 1; 
+        let computerSelection = Math.floor(Math.random() * 3) + 1;
 
         switch (computerSelection) {
             case 1:
@@ -40,7 +40,7 @@ function game() {
             if (playerSelection == "rock") {
                 if (computerSelection == "rock") {
                     console.log("It's tie. Your choice was " + playerSelection + " and Computer's choice was " + computerSelection + ".");
-                
+
                     // console.log("Your score : "+playerScore);
                     // console.log("Computer's score : "+computerScore);
                 }
@@ -68,10 +68,10 @@ function game() {
             else if (playerSelection == "paper") {
                 if (computerSelection == "paper") {
                     console.log("It's tie. Your choice was " + playerSelection + " and Computer's choice was " + computerSelection + ".");
-                    
+
                     // console.log("Your score : "+playerScore);
                     // console.log("Computer's score : "+computerScore);
-                    
+
                 }
                 else if (computerSelection == "rock") {
                     console.log("You Won! Paper beats Rock");
@@ -97,7 +97,7 @@ function game() {
             else if (playerSelection == "scissors") {
                 if (computerSelection == "scissors") {
                     console.log("It's tie. Your choice was " + playerSelection + " and Computer's choice was " + computerSelection + ".");
-                
+
                     // console.log("Your score : "+playerScore);
                     // console.log("Computer's score : "+computerScore);
 
@@ -122,7 +122,7 @@ function game() {
             }
 
             // if user type incorrect choice
-            
+
             else {
                 console.log("Enter Your choice correctly");
             }
