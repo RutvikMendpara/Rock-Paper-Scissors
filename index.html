@@ -5,14 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script src="/index.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
-
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
@@ -21,53 +15,24 @@
         <h1>ROCK PAPER SCISSORS</h1>
     </header>
 
-    <main class="main">
-        <div class="score-header">
-            <h2>Choose your weapon</h2>
-        </div>
-        <div class="score-text">
-            <h3>The first player to get 5 points will win!</h3>
-        </div>
+    <div class="choicearea">
+        <h2>Computer Choice : <span id="computers-choice"></span></h2>
+        <h2>Players Choice : <span id="users-choice"></span></h2>
+        <h2>Result : <span id="result"></span></h2>
+    </div>
 
-        <div class="score-container">
-            <div class="score-box">
-                <div class="sign" id="player-sign">
-                    ❓
-                </div>
-                <p class="score" id="player-score">
-                    player : 0
-                </p>
-            </div>
-
-            <div class="score-box">
-                <div class="sign" id="computer-sign">
-                    ❓
-                </div>
-                <p class="score" id="computer-score">
-                    computer : 0
-                </p>
-            </div>
-
-        </div>
-
-        <div class="button">
-            <button class="btn" id="rock">
-                ✊
-            </button>
-            <button class="btn" id="paper">
-                ✋
-            </button>
-            <button class="btn" id="scissors">
-                ✂️
-            </button>
-        </div>
-
-    </main>
+    <div class="btn">
+        <button class="gamebtn" id="rock">✊</button>
+        <button class="gamebtn" id="paper">✋</button>
+        <button class="gamebtn" id="Scissors">✂️</button>
+    </div>
 
     <footer class="footer">
         <p>Copyright &copy; Rutvik Mendpara</p>
     </footer>
 
+
+    <script src="/app.js" defer></script>
 </body>
 
 </html>

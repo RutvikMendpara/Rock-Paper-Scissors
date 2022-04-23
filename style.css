@@ -3,11 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
 }
-
-
-/* header */
 
 .header {
     display: flex;
@@ -21,69 +17,28 @@
     font-size: x-large;
 }
 
-/* main */
-
-.main {
+.choicearea{
+    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    color: #000000;
-    background-color: #FFFFFF;
+}
+
+.choicearea h2 {
     padding: 20px;
-}
-
-.score-header {
-    padding: 20px;
-    font-size: larger;
-}
-
-.score-text {
-    padding: 20px;
-    font-size: large;
-}
-
-.score-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    border: 2px solid #F5F5F7;
-    background-color: #F5F5F7;
-    border-radius: 12px;
-
-}
-
-.score-box {
-
-    flex-direction: column;
-    height: 170px;
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-
-}
-
-.sign {
-    padding: 20px;
-    font-size: 80px;
-}
-
-.score {
-    font-size: large;
-    padding: 10px;
-}
-
-.button {
-    display: flex;
-
 }
 
 .btn {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn .gamebtn {
+    
     height: 150px;
     width: 150px;
     margin: 30px;
