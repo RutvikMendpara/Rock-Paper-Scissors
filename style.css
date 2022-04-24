@@ -48,6 +48,24 @@
     border-radius: 12px;
 }
 
+.round{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.score h2{ 
+    margin: 20px;
+
+}
+
 /* footer */
 .footer {
     display: flex;

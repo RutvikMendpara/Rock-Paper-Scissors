@@ -2,56 +2,84 @@ const computersChoiceDisplay = document.getElementById('computers-choice');
 const userChoiceDisplay = document.getElementById('users-choice');
 const resultDisplay = document.getElementById('result');
 const possibleChoices = document.querySelectorAll('button');
+const displayUserScore = document.getElementById('displayUserScore');
+const displayComputerScore = document.getElementById('displayComputerScore');
+const round = document.getElementById('round');
 let userChoice;
 let result;
-
-possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click' , (e) => {
+let userScore = 0;
+let computerScore = 0;
+let displayScore;
+let displayRound;
+possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {
     userChoice = e.target.id;
     userChoiceDisplay.innerHTML = userChoice;
     generateComputerChoice();
-    getResult()
-    
+    getResult();
+    getRound();
+
 }))
 
-function generateComputerChoice(){
-    const randomNumber = Math.floor(Math.random() * 3);
-    
-    if(randomNumber === 1){
+function generateComputerChoice() {
+
+    const randomNumber = Math.floor(Math.random() * 3) + 1;
+
+    if (randomNumber === 1) {
         computersChoice = "rock";
     }
-    if(randomNumber === 2){
+    if (randomNumber === 2) {
         computersChoice = "scissors";
     }
-    if(randomNumber === 3){
+    if (randomNumber === 3) {
         computersChoice = "paper";
     }
     computersChoiceDisplay.innerHTML = computersChoice;
 }
 
-function getResult(){
-    if (computersChoice === userChoice){
-        result = "It's draw !"
+function getResult() {
+    if (computersChoice === userChoice) {
+        result = "It's draw !";
+
     }
-    if (computersChoice === "rock" && userChoice === "paper"){
-        result = "You Win !"
+
+    if (computersChoice === "rock" && userChoice === "paper") {
+        result = "You Win !";
+        userScore++;
     }
-    
-    if (computersChoice === "rock" && userChoice === "scissors"){
-        result = "You lost !"
+
+    if (computersChoice === "rock" && userChoice === "scissors") {
+        result = "You lost !";
+        computerScore++;
     }
-    
-    if (computersChoice === "paper" && userChoice === "scissors"){
-        result = "You Win !"
+
+    if (computersChoice === "paper" && userChoice === "scissors") {
+        result = "You Win !";
+        userScore++;
     }
-    if (computersChoice === "paper" && userChoice === "rock"){
-        result = "You lost !"
+    if (computersChoice === "paper" && userChoice === "rock") {
+        result = "You lost !";
+        computerScore++;
     }
-    if (computersChoice === "scissors" && userChoice === "rock"){
-        result = "You win !"
+    if (computersChoice === "scissors" && userChoice === "rock") {
+        result = "You win !";
+        userScore++;
     }
-    if (computersChoice === "scissors" && userChoice === "paper"){
-        result = "You lose !"
+    if (computersChoice === "scissors" && userChoice === "paper") {
+        result = "You lose !";
+        computerScore++;
     }
     resultDisplay.innerHTML = result;
-    
+    displayUserScore.innerHTML = userScore;
+    displayComputerScore.innerHTML = computerScore;
+}
+
+function getRound() {
+    if (userScore === 5) {
+        displayRound = "User won the game";
+        round.innerHTML = displayRound;
+    }
+    if (computerScore === 5) {
+        displayRound = "computer won the game";
+        round.innerHTML = displayRound;
+    }
 }
