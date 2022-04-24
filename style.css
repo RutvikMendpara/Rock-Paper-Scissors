@@ -67,6 +67,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.round h1{
+    /* margin: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.round h2{
+    /* margin: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #a1fad9;
+    margin-bottom: 10px;
 }
 
 /* score */
@@ -157,5 +179,6 @@
         align-items: center;
         flex-direction: column;
     }
+
 
 }
