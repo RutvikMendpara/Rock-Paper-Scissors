@@ -36,10 +36,29 @@
     align-items: center;
 }
 
-.choicearea h2 {
-    padding: 20px;
-}
+#computers-choice{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    background-color: #afcbff;
+    border: 2px solid #afcbff;
+    border-radius: 100%;
 
+}
+#users-choice{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    background-color: #e4d9ff;
+    border: 2px solid #e4d9ff;
+    border-radius: 100%;
+}
 /* button */
 
 .btn {

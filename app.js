@@ -6,6 +6,7 @@ const displayUserScore = document.getElementById('displayUserScore');
 const displayComputerScore = document.getElementById('displayComputerScore');
 const round = document.getElementById('round');
 let userChoice;
+let userChoice1;
 let result;
 let userScore = 0;
 let computerScore = 0;
@@ -13,7 +14,18 @@ let displayScore;
 let displayRound;
 possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {
     userChoice = e.target.id;
-    userChoiceDisplay.innerHTML = userChoice;
+    
+    if (userChoice === "rock") {
+        userChoice1 = "✊"
+        
+    }
+    if (userChoice === "scissors") {
+        userChoice1 = "✌️"
+    }
+    if (userChoice === "paper") {
+        userChoice1 = "✋"
+    }
+    userChoiceDisplay.innerHTML = userChoice1;
     generateComputerChoice();
     getResult();
     getRound();
@@ -26,14 +38,18 @@ function generateComputerChoice() {
 
     if (randomNumber === 1) {
         computersChoice = "rock";
+        computersChoice1 = "✊"
+        
     }
     if (randomNumber === 2) {
         computersChoice = "scissors";
+        computersChoice1 = "✌️"
     }
     if (randomNumber === 3) {
         computersChoice = "paper";
+        computersChoice1 = "✋"
     }
-    computersChoiceDisplay.innerHTML = computersChoice;
+    computersChoiceDisplay.innerHTML = computersChoice1;
 }
 
 function getResult() {
@@ -48,6 +64,7 @@ function getResult() {
     }
 
     if (computersChoice === "rock" && userChoice === "scissors") {
+        
         result = "You lost !";
         computerScore++;
     }
@@ -71,6 +88,7 @@ function getResult() {
     resultDisplay.innerHTML = result;
     displayUserScore.innerHTML = userScore;
     displayComputerScore.innerHTML = computerScore;
+
 }
 
 function getRound() {
